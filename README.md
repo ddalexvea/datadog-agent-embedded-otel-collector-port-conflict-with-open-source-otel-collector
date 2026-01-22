@@ -222,12 +222,6 @@ Then restart:
 minikube ssh 'sudo systemctl restart datadog-agent'
 ```
 
-### Option 3: If using Remote Config / Fleet Automation
-
-**Important:** Remote Config delivers custom port settings AFTER Agent startup. If port 4317 is already in use, the DDOT Collector will crash before Remote Config can apply the custom ports.
-
-**Solution:** Always set custom ports in the **local** `datadog.yaml` file as a fallback.
-
 ## Troubleshooting
 
 ```bash
